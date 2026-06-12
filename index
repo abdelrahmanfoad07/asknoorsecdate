@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Noor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background particle effect -->
+    <div class="particle-container" id="particleContainer"></div>
+
+    <!-- Navigation indicator -->
+    <div class="nav-indicator">
+        <div class="dot active" data-section="0"></div>
+        <div class="dot" data-section="1"></div>
+        <div class="dot" data-section="2"></div>
+        <div class="dot" data-section="3"></div>
+        <div class="dot" data-section="4"></div>
+        <div class="dot" data-section="5"></div>
+    </div>
+
+    <!-- Main container -->
+    <div class="sections-container">
+
+        <!-- SECTION 1: Landing -->
+        <section class="section" id="section-0">
+            <div class="landing-content">
+                <h1 class="landing-title">Hey Noor</h1>
+                <p class="landing-subtitle">I made this instead of sending a normal message.</p>
+                <button class="btn btn-primary" onclick="scrollToSection(1)">Continue at your own risk</button>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Evidence Board -->
+        <section class="section" id="section-1">
+            <div class="section-header">
+                <h2>Evidence Board</h2>
+                <p class="section-subtitle">A scientific study of us surviving things</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card" style="animation-delay: 0.1s;">
+                    <div class="card-icon">📞</div>
+                    <h3>We survived long calls</h3>
+                    <p>And we didn't even complain that much</p>
+                </div>
+
+                <div class="evidence-card" style="animation-delay: 0.2s;">
+                    <div class="card-icon">📚</div>
+                    <h3>We survived exam season</h3>
+                    <p>Which is basically a relationship speedrun</p>
+                </div>
+
+                <div class="evidence-card" style="animation-delay: 0.3s;">
+                    <div class="card-icon">⚡</div>
+                    <h3>We survived random arguments</h3>
+                    <p>And made up every single time</p>
+                </div>
+
+                <div class="evidence-card" style="animation-delay: 0.4s;">
+                    <div class="card-icon">🔋</div>
+                    <h3>We survived phone batteries dying</h3>
+                    <p>Which might be the real test</p>
+                </div>
+
+                <div class="evidence-card" style="animation-delay: 0.5s;">
+                    <div class="card-icon">😏</div>
+                    <h3>We survived me annoying you</h3>
+                    <p>Honestly, my greatest achievement</p>
+                </div>
+
+                <div class="evidence-card conclusion" style="animation-delay: 0.6s;">
+                    <div class="card-icon">✨</div>
+                    <h3>Statistically speaking</h3>
+                    <p>We're doing pretty well</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Compatibility Test -->
+        <section class="section" id="section-2">
+            <div class="section-header">
+                <h2>Compatibility Assessment</h2>
+                <p class="section-subtitle">Unofficial study results</p>
+            </div>
+
+            <div class="compatibility-container">
+                <div class="compatibility-test">
+                    <div class="test-item">
+                        <span class="test-label">Likes iced coffee?</span>
+                        <span class="test-check">✓</span>
+                    </div>
+                    <div class="test-item">
+                        <span class="test-label">Likes random conversations?</span>
+                        <span class="test-check">✓</span>
+                    </div>
+                    <div class="test-item">
+                        <span class="test-label">Likes stealing attention?</span>
+                        <span class="test-check">✓</span>
+                    </div>
+                    <div class="test-item">
+                        <span class="test-label">Tolerates Abdelrahman?</span>
+                        <span class="test-check">Somehow ✓</span>
+                    </div>
+                </div>
+
+                <div class="compatibility-meter">
+                    <div class="meter-label">Overall Compatibility</div>
+                    <div class="meter-bar">
+                        <div class="meter-fill" id="compatibilityFill"></div>
+                    </div>
+                    <div class="meter-percentage">
+                        <span id="percentageValue">0</span>%
+                    </div>
+                    <div class="meter-note">Margin of error: 1%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Memory Timeline -->
+        <section class="section" id="section-3">
+            <div class="section-header">
+                <h2>Memory Timeline</h2>
+                <p class="section-subtitle">A brief history of us</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>First conversations</h3>
+                        <p>Random messages turned into real talks</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Long calls</h3>
+                        <p>Hours of conversations about nothing and everything</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>The first date</h3>
+                        <p>Where we found out we had actual chemistry in person</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Random funny moments</h3>
+                        <p>The kind you randomly remember and smile at</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot pending"></div>
+                    </div>
+                    <div class="timeline-content pending-content">
+                        <h3>Future adventures</h3>
+                        <p>Pending your response...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Mission Briefing -->
+        <section class="section" id="section-4">
+            <div class="section-header">
+                <h2>Mission Briefing</h2>
+                <p class="section-subtitle">Classified Information</p>
+            </div>
+
+            <div class="mission-card">
+                <div class="mission-header">
+                    <div class="classified-stamp">CLASSIFIED</div>
+                    <h3>Operation: Second Date</h3>
+                </div>
+
+                <div class="mission-content">
+                    <div class="mission-section">
+                        <h4>Primary Objectives</h4>
+                        <ul class="mission-list">
+                            <li><span class="check">✓</span> Have fun</li>
+                            <li><span class="check">✓</span> Make new memories</li>
+                            <li><span class="check">✓</span> Find something new to argue about</li>
+                            <li><span class="check">✓</span> Obtain food</li>
+                        </ul>
+                    </div>
+
+                    <div class="mission-section">
+                        <h4>Risk Assessment</h4>
+                        <p class="assessment-value" style="color: #2ecc71;">Extremely Low</p>
+                    </div>
+
+                    <div class="mission-section">
+                        <h4>Reward Assessment</h4>
+                        <p class="assessment-value" style="color: #f39c12;">Potentially Excellent</p>
+                    </div>
+                </div>
+
+                <div class="mission-footer">
+                    Awaiting confirmation • Eyes only
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Final Question -->
+        <section class="section" id="section-5">
+            <div class="final-question-container">
+                <div class="question-card">
+                    <div class="question-text-1">
+                        <p>So...</p>
+                    </div>
+
+                    <div class="question-text-2" style="margin-top: 2rem;">
+                        <p>I was thinking...</p>
+                    </div>
+
+                    <div class="question-text-3" style="margin-top: 2rem;">
+                        <p>We should probably do that date thing again.</p>
+                    </div>
+
+                    <div class="question-buttons" style="margin-top: 3rem;">
+                        <button class="btn btn-primary" onclick="handleResponse('yes')">Sounds good</button>
+                        <button class="btn btn-secondary" onclick="handleResponse('absolutely')">Absolutely</button>
+                    </div>
+
+                    <div class="celebration-message" id="celebrationMessage" style="display: none; margin-top: 2rem;">
+                        <p class="excellent-text">Excellent choice.</p>
+                        <p class="followup-text">Now you have to tell me when you're free.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint" id="scrollHint">
+        <span>Scroll or click dots</span>
+        <div class="arrow-down"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
